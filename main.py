@@ -10,8 +10,7 @@ MY_EMAIL = os.environ.get("MY_EMAIL")
 MY_PASSWORD = os.environ.get("MY_PASSWORD")
 
 
-def get_letter(name):    
-     
+def get_letter(name):         
     file_path = f"./letter_templates/letter_{random.randint(1 ,3)}.txt"
 
     with open(file_path) as tl:
@@ -24,7 +23,7 @@ def sendmail(name, email):
           
     with smtplib.SMTP("smtp.gmail.com") as connection:
         connection.starttls()
-        connection.login(user=MY_EMAIL, password=PASSWORD)
+        connection.login(user=MY_EMAIL, password=MY_PASSWORD)
         connection.sendmail(from_addr=MY_EMAIL, to_addrs=email, msg=f"Subject: Happy Birthday!\n\n{get_letter(name)}")
                 
                 
