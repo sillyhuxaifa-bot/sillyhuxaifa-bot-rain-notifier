@@ -43,9 +43,8 @@ it_will_rain = False
 for x in data:
     weather_id = x["weather"][0]["id"]
     #time = x["dt_txt"].split(" ")[1].split(":")[0]
-    if weather_id < 900:
+    if weather_id < 700:
         it_will_rain = True
         
 if it_will_rain:
-    print("It's gonna rain today!")
     send_mail("Subject:UMBRELLA\n\nIt's gonna rain today, bring an umbrella")
