@@ -4,7 +4,7 @@ import smtplib
 
 
 ENDPOINT = "https://api.openweathermap.org/data/2.5/forecast"
-api_key = os.environ.get("OWN_API_KEY")
+OWN_API_KEY = os.environ.get("OWN_API_KEY")
 
 
 MY_EMAIL = os.environ.get("MY_EMAIL")
@@ -31,7 +31,7 @@ def send_mail(sub_msg):
 parameters = {
     "lat": 24.9472,
     "lon": 66.9833,
-    "appid": api_key,
+    "appid": OWN_API_KEY,
     "cnt": 4
 }
 
