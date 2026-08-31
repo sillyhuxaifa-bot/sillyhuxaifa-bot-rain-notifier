@@ -45,4 +45,4 @@ for x in data:
     time = x["dt_txt"].split(" ")[1].split(":")[0]
     if weather_id < 900 and time == "18":
         print("It's gonna rain today!")
-        send_mail("Subject:UMBRELLA\n\nIt's gonna rain today, bring an ☔")
+        send_mail("Subject:UMBRELLA\n\nIt's gonna rain today, bring an umbrella")
